@@ -10,7 +10,14 @@ def encode(tempPassword):  # This is Abhiram Dumpa's code
 
 
 def decode(password):
-
+    new_password = ""
+    for char in password:
+        num = int(char)
+        new_num = num - 3
+        if new_num < 0:
+            new_num = new_num + 10
+        new_password += str(new_num)
+    return new_password
 
 
 if __name__ == "__main__":
